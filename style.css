@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'zabars', Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px silver;
+    overflow: hidden;
+    background-image: url('img/desert.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#startscreen {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw, 100vh;
+}
+
+#startscreen {
+    display: block;
+    background-image: url('img/9_intro_outro_screens/start/startscreen_1.png');
+}
+
+.start-btns {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; 
+    margin: 10px;
+}
+
+.start-button {
+    background-color: #fdc701;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'zabars', Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px silver;
+    margin: 10px;
+    box-shadow: 5px 5px 12px rgb(83, 83, 83);
+    cursor: pointer;
+    flex-grow: 0; 
+}
+
+.setting-btn {
+    position: fixed;
+    background: none;
+    border-color: unset;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px rgb(83, 83, 83);
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto; 
+    right: 20px; 
+    top: 20px;
+}
+
+/*for the Gameplay*/
+.help-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.text-container {
+    position: relative;
+    width: 50%;
+    height: 70%;
+    padding: 40px;
+    color: rgb(254, 199, 1, 80%);
+    text-shadow: none;
+    background-color: black;
+    border-radius: 10px;
+    text-align: left;
+    overflow: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-container img {
+    height: 24px;
+}
+
+.turn-text {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+#turnImg {
+    width: 60px;
+    height: auto;
+}
+
+#canvas-frame {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/desert.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#settingBtn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px rgb(83, 83, 83);
+    padding: 10px;
+    z-index: 3;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 4;
+    display: none;
+}
+
+#settingMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+canvas {
+    background-color: rgba(32, 32, 32, 0.8);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#canvas-frame h1 {
+    display: none;
+}
+
+.mobile {
+    display: none;
+    width: -webkit-fill-available;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    bottom: 30px;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.left-mob,
+.right-mob {
+    width: 30%;
+    gap: 12px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#btnLeft,
+#btnRight,
+#btnUp,
+#btnThrow {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px rgb(83, 83, 83);
+    padding: 10px;
+    z-index: 3;
+}
+
+/*1366px is width of iPad pro */
+@media (max-width: 1024px),
+(width: 1366px) and (height: 1024px) {
+    .mobile {
+        display: flex;
+    }
+
+    canvas {
+        display: block !important;
+        position: fixed;
+        z-index: 1;
+    }
+
+    #settingBtn {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+
+    #canvas-frame h1 {
+        display: block;
+        text-align: center;
+        font-size: larger;
+    }
+}
+
+@media (max-width: 800px) and (max-height: 740px) {
+    #canvas-frame h1 {
+        display: block;
+        text-align: center;
+        font-size: larger;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-container {
+        font-size: smaller;        
+    }    
+}
+
+@font-face {
+    font-family: 'zabars';
+    src: url('fonts/zabars.ttf');
+}

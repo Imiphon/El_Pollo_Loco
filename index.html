@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/pepe-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./models/drawable-objects.class.js"></script>
+    <script src="./models/movable-object.class.js"></script>
+    <script src="./models/images.class.js"></script>
+    <script src="./models/keys.class.js"></script>
+    <script src="./models/character.class.js"></script>
+    <script src="./models/chicken.class.js"></script>
+    <script src="./models/background.class.js"></script>
+    <script src="./models/bigChick.class.js"></script>
+
+    <script src="./models/chicken-dead.class.js"></script>
+    <script src="./models/world.class.js"></script>
+    <script src="./models/cloud.class.js"></script>
+    <script src="./models/status-healthBar.class.js"></script>
+    <script src="./models/status-coinBar.class.js"></script>
+    <script src="./models/status-bottleBar.class.js"></script>
+    <script src="./models/bottle-flies.class.js"></script>
+    <script src="./models/status-bigChickBar.class.js"></script>
+    <script src="./models/bottle-on-ground.class.js"></script>
+    <script src="./models/heart.class.js"></script>
+    <script src="./models/level.class.js"></script>
+    <script src="./levels/level-file.js"></script>
+    <script src="./models/setting.class.js"></script>
+
+    <script src="./models/solo-sound.class.js"></script>
+    <script src="./models/small-chicken.class.js"></script>
+    <script src="./js/sound-mixer.js"></script>
+
+    <title>El Pollo Loco</title>
+</head>
+
+<body onload="checkSize()">
+    <div id="startscreen">
+        <div class="start-btns">
+            <button onclick="startCanvas()" class="start-button" id="start">Start Game</button>
+        </div>
+        <button onclick="openOverlay()" class="setting-btn"><img src="img/settings-48.png" alt=""></button>
+    </div>
+
+    <div id="helpOverlay" class="help-overlay" onclick="closeOverlay()">
+        <div id="textContainer" class="text-container"> </div>
+    </div>
+
+    <div id="canvas-frame">
+        <button id="settingBtn" onclick="openSetting()">
+            <img src="img/settings-48.png" alt="Pause">
+        </button>
+        <h1 id="headline">El Pollo Loco</h1>
+        <canvas id="canvas" width="720" height="420">
+        </canvas>
+    </div>
+
+    <div id="mobile" class="mobile">
+        <div class="left-mob">
+            <button id="btnLeft"><img src="img/arrow-left.png" alt="" srcset=""></button>
+            <button id="btnRight"><img src="img/arrow-right.png" alt="" srcset=""></button>
+        </div>
+        <div class="right-mob">
+            <button id="btnUp"><img src="img/arrow-up.png" alt="" srcset=""></button>
+            <button id="btnThrow"><img src="img/throw.png" alt="" srcset=""></button>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
